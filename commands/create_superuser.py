@@ -4,6 +4,7 @@ from db import database
 from managers.user import UserManager
 from models import RoleType
 
+
 @click.command()
 @click.option("-f", "--first_name", type=str, required=True)
 @click.option("-l", "--last_name", type=str, required=True)
@@ -19,11 +20,12 @@ async def create_user(first_name, last_name, email, phone, iban, password):
         "phone": phone,
         "iban": iban,
         "role": RoleType.admin,
-        "password": password
+        "password": password,
     }
     await database.connect()
     await UserManager.register(user_data)
     await database.disconnect()
+
 
 if __name__ == "__main__":
     create_user(_anyio_backend="asyncio")

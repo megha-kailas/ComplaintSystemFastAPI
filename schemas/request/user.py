@@ -11,6 +11,3 @@ class UserRegisterIn(BaseUser):
 
 class UserLoginIn(BaseUser):
     password: str
-
-
-
