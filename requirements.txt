@@ -1,0 +1,13 @@
+fastapi
+sqlalchemy
+uvicorn
+python-decouple
+databases
+alembic
+aiosqlite
+pyjwt
+passlib
+bcrypt
+flake8
+autopep8
+asyncclick
